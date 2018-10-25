@@ -1,0 +1,338 @@
+
+<!DOCTYPE html>
+<html dir="ltr" ">
+<head>
+<meta charset=" utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="description" content="SILLYTHING®">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>SILLYTHING®</title>
+<style type="text/css" media="screen">
+    *,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+/* @group Base */
+::selection {
+    color: #f00;
+    background-color: transparent;
+}
+
+::-moz-selection {
+    color: #f00;
+    background-color: transparent;
+}
+
+::-webkit-scrollbar {
+    width: .6em;
+    height: .6em;
+    background: #000;
+}
+
+::-webkit-scrollbar-track {
+    background: #000;
+}
+
+::-webkit-scrollbar-thumb {
+    width: .5em;
+    height: .6em;
+    background-color: #333;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #666;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: #666;
+}
+
+html,
+body {
+    background-color: #000;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    overflow-y: scroll;
+    direction: ltr;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: rgba(255, 0, 0, .5);
+    /* font-size: calc(1vw + 1vh); */
+    font-size: 16px;
+    text-align: center;
+}
+
+body,
+input {
+    font-family: 'Helvetica Neue', Helvetica, -apple-system, BlinkMacSystemFont, Arial, sans-serif;
+    color: #eee;
+    text-transform: uppercase;
+    text-rendering: optimizelegibility;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+h1 {
+    font-size: 1.2em;
+}
+
+a {
+    color: #eee;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: auto;
+    width: 100%;
+    height: 99vh;
+    min-width: 280px;
+    max-width: 32rem;
+    overflow: hidden;
+    text-align: center;
+    padding: 2rem;
+}
+
+#st {
+    width: 12rem;
+    fill: #eee;
+    margin: auto;
+    margin-bottom: 10vh;
+}
+
+#logo,
+#follow {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: .25s;
+    -moz-animation-duration: .25s;
+    animation-duration: .25s;
+}
+
+#subscribe,
+#thanks {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in 1;
+    -moz-animation: fadeIn ease-in 1;
+    animation: fadeIn ease-in 1;
+    -webkit-animation-fill-mode: forwards;
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+    -webkit-animation-duration: 1s;
+    -moz-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-delay: .5s;
+    -moz-animation-delay: .5s;
+    animation-delay: .5s;
+}
+
+#logo,
+#subscribe,
+#thanks,
+#follow {
+    width: 100%;
+}
+
+#follow {
+    margin-top: 2rem;
+}
+
+form {
+    margin: 0;
+}
+
+input {
+    cursor: initial;
+    border: none;
+    border-radius: 0;
+    min-height: 1.5rem;
+    display: inline-block;
+    width: 100%;
+    max-width: 100%;
+    margin: 1rem auto;
+    padding: 1rem;
+    border-style: solid;
+    border-color: #eee;
+    border-width: 0 0 1px 0;
+    background-color: transparent;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input,
+input::placeholder {
+    color: #eee;
+    font-size: .75rem;
+    line-height: 1.2;
+    text-align: center;
+}
+
+input:focus {
+    border-color: #d00;
+    outline: none;
+}
+
+input[type='submit'] {
+    font-size: 1rem;
+    border-width: 1px;
+    display: inline-block;
+    width: auto;
+    max-width: auto;
+    position: relative;
+}
+
+input[type='submit']:active {
+    top: 1px;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+::-webkit-input-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+:-moz-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+::-moz-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+:-ms-input-placeholder {
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+[placeholder]:focus::-webkit-input-placeholder {
+    transition: opacity 2s 0.5s ease;
+    opacity: 0;
+}
+
+.icon {
+    height: 1rem;
+    width: 1rem;
+    display: inline-block;
+    fill: currentColor;
+    margin: .25rem;
+    vertical-align: middle;
+}
+
+@-webkit-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    from {
+        opacity: 01;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}</style>
+<meta name="mobile-web-app-capable" content="yes">
+<link rel="profile" href="http://gmpg.org/xfn/11" />
+<meta http-equiv="cleartype" content="on">
+<meta name="HandheldFriendly" content="True">
+<meta name="MobileOptimized" content="450">
+<meta property="og:title" content="SILLYTHING®">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://www.kmy-4q.tk/">
+<meta property="og:site_name" content="SILLYTHING®">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#000000">
+<meta name="msapplication-TileColor" content="#333333">
+<meta name="theme-color" content="#ffffff">
+</head>
+<body>
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+<symbol id="icon-facebook" viewBox="0 0 32 32">
+<path d="M30.233 0h-28.466c-.976 0-1.767.791-1.767 1.767v28.468c0 .974.791 1.765 1.767 1.765h15.326v-12.392h-4.17v-4.829h4.17v-3.562c0-4.133 2.524-6.384 6.212-6.384 1.767 0 3.284.132 3.727.191v4.32l-2.557.001c-2.006 0-2.394.954-2.394 2.351v3.084h4.783l-.623 4.829h-4.16v12.391h8.155c.973 0 1.764-.791 1.764-1.767v-28.466c0-.976-.791-1.767-1.767-1.767z" />
+</symbol>
+<symbol id="icon-instagram" viewBox="0 0 32 32">
+<path d="M16 0c5.211 0 5.829.02 7.888.114 5.289.241 7.759 2.75 8 8 .094 2.057.112 2.675.112 7.886 0 5.212-.02 5.829-.112 7.886-.243 5.245-2.706 7.759-8 8-2.059.094-2.674.114-7.888.114-5.211 0-5.829-.02-7.886-.114-5.302-.242-7.759-2.763-8-8.001-.094-2.058-.114-2.674-.114-7.887 0-5.21.021-5.827.114-7.886.242-5.248 2.706-7.759 8-8 2.059-.092 2.675-.112 7.886-.112zm0 5.977c-5.534 0-10.022 4.487-10.022 10.021 0 5.535 4.488 10.024 10.022 10.024s10.022-4.488 10.022-10.024c0-5.534-4.488-10.021-10.022-10.021zm0 3.516c3.593 0 6.505 2.913 6.505 6.505 0 3.595-2.912 6.506-6.505 6.506s-6.505-2.911-6.505-6.506c0-3.592 2.912-6.505 6.505-6.505zm10.418-6.253c-1.294 0-2.343 1.049-2.343 2.342 0 1.293 1.049 2.342 2.343 2.342 1.293 0 2.341-1.049 2.341-2.342 0-1.293-1.048-2.342-2.341-2.342z" />
+</symbol>
+</svg> <div class=content>
+<div id="logo">
+<a href="https://www.kmy-4q.tk">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 227" id="st"><path d="M364.9 193.1v13.3L334 219.1h-83v-13c0-.5-2.1-6-3.1-8.8v21.8H90.5l9.5-14.3v-64l-8 9h-8V219H33.3l9.5-14.3v-55H23.2v-29h-7.7l10.6-14.6V75.5h24.3L30.3 64.7 26 62.4V28l34.3-12.6H110V26L137 15.6l10.7-4V26l27.7-10.2 10.6-4-.1 63.7h32.3V28l33.2-12.2 10.7-4-.2 63.7h16.6V15h43.9v11.8l29.8-11.3 10.7-4v102h1.9v49.7h14.3l-14.3 30m7.9-37.9v-49.8h-1.9V0l-10.7 4-29.8 11.3V7.1H270V.5l-59.6 22v45.1h-16.5l.2-67-38.4 14V.1l-38 14.3v-7H59l-40.8 15v44.7l.9.5h-1v36c-2.1 3.1-18.1 25-18.1 25h15.3v29h19.5v44.8L18.5 227h317.1l37.2-15.3v-16.8l19-39.6zM104 69.3v-8.7H88l16.2 8.6m198 50.9l9.7-4 7.3-9.9V82.6h-17zM74.4 79.5v23.3H61.8V83.4H34v25.4l-3 4h43.4l27.6-10V77L61.8 55.8V34h12.6v18.7H102V23.2H61.8L34 33.5v24.2zm65.5 33.3V23L112 33.5v75.3l-2.9 4zm65.6 98.4v-89.8l-25.3 10.5v75.3l-2.7 4zm12.7-98.4V83.4h-27.6v19.4H178l.2-79.6-28 10.3v75.3l-3 4zm76 0V83.4h-27.6v19.4H254l.2-79.6-28 10.3v75.3l-3 4zm60.9-89.9v89.9h-31l3-4V74.7h-40.6V22.9h28.1v40.3H327V33.5zm-279 188.3v-69.4h12.4l18.4-20.6H31v20.6h19.5V207l-2.7 4zM145 173v38h25.3v-89.8H145v40.3h-11.5v-40.3h-25.6v85.9l-2.6 4h28.2V173zm139.7-52v90h-25.6v-6.5l-19-51.5v58h-28.3l2.7-4v-86h25.6l19 51.5v-51.5zm74.3 66h-2v14l-24.5 10h-40.8l2.7-4v-75.4l25.8-10.3H357V159h-25.5v-20H320v56.7h11.5v-8.2h-2.3v-16.4h37.5zM400 194v4.8h1.2c2 0 3-.9 3-2.4 0-1.6-1.1-2.3-3.3-2.3zm10.5 2c0 2.5-1.4 4.5-4 5.4l4.4 8.7H404l-3.6-7.7h-.6v7.7h-6.2v-20h8.1c5.8 0 8.7 2.2 8.7 6m1.5-6a14.3 14.3 0 0 0-10.4-4.3 14 14 0 0 0-10.3 4.2 14.9 14.9 0 0 0-4.3 10.5c0 3.9 1.5 7.5 4.3 10.3 2.8 2.8 6.4 4.3 10.3 4.3 3.9 0 7.5-1.5 10.4-4.3a14 14 0 0 0 4.2-10.3c0-4-1.5-7.7-4.2-10.4m2.7-2.6c3.4 3.4 5.3 8 5.3 13 0 5.1-1.8 9.6-5.3 13a18.7 18.7 0 0 1-13.1 5.5 18 18 0 0 1-13-5.5c-3.5-3.5-5.4-8.1-5.4-13 0-4.8 2-9.5 5.5-13.1 3.4-3.4 7.9-5.3 12.9-5.3s9.6 1.9 13 5.4" /></svg> </a>
+</div><div id="subscribe">
+</svg></a></div>
+</div>
+<script>
+    </script>
+</body>
+</html>
